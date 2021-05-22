@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 20/03/2021, 14:05:20
+    Author     : Gabriel
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+
+@media (max-width: 1079px){
+    #links{
+        display: none;
+    }
+    
+}
+footer{
+    background-image: url(../images/banner.png);
+    clear: both;
+    width:100%;
+    position: relative;
+    padding-bottom:50px;
+    margin-top: 20px;
+}
+
+footer #l1{
+    color: white  
+}
+
+.rodape p{
+    text-align: center;
+    color: white;
+    padding: 30px 0;
+}
+
+.criadores{
+    position: absolute;
+    top: 5px;
+}
+.criadores li{
+    float: left;
+    margin-right: 15px;
+    list-style: none;
+}
+
+#boasVindas h1{
+    font-family: 'Press Start 2P', cursive;
+    float: left;
+    padding-top: 10px;
+    margin: 3px;  
+}
+#boasVindas img{
+    width: 50px   
+}
+#boasVindas{
+    width: 500px;
+    margin: 0 auto;
+
+}
+#cards{
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#cards img{
+    margin: 0 auto;
+    widows: 270px;
+    height: 250px;
+}
+
+
+
+

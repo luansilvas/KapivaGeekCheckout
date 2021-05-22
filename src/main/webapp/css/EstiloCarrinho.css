@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 05/05/2021, 11:20:00
+    Author     : adm
+*/
+body{
+    width: 50%;
+}
+
+#produto img{
+    width: 60px;
+    height: 60px;
+}
+
+#produto{
+    width: 20%;
+
+}
+
+#produto p{
+    width: 40%;
+    float: right;
+    text-align: left;
+    margin: 0 90px 0 2px;
+}
+
+
+#input{
+    width: 50%;
+    height: 20%;
+}
+tr th{
+    text-align: left;
+    margin-left: 10px;
+
+}
+
+.tituloTabelaQtd{
+    width: 30%;
+}
+#valorQuantidade{
+    width: 10%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+#input img{
+    width: 10%;
+
+}
+#product-listing{
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 60%;
+}

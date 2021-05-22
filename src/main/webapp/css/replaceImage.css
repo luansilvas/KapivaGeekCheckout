@@ -1,0 +1,72 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 10/03/2021, 23:49:42
+    Author     : luans
+*/
+
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/03/2021, 16:07:35
+    Author     : luans
+*/
+body{
+
+    margin: 15% auto;
+}
+
+.general-content{
+    width: 40%;
+
+    margin: 0 auto;
+    
+
+}
+
+.general-content p, #escolhaArquivoLabel,.mainimage,h1,.old-image{
+    text-align: center;
+}
+#replace{
+    float: right;
+}
+#custom-button{
+    border: white;
+    background-color: lightgray;
+}
+.general-fieldset{
+    width: 70%;
+    margin: 18% auto;
+}
+
+#custom-button:hover{
+    background: white;
+}
+#custom-text{
+
+}
+#custom-button{
+    background-color: white;
+}
+#escolhaArquivoLabel{
+    float: left;
+}
+
+.search-field{
+    border:1px solid black;
+    min-width: 40%;
+    max-width: auto;
+    height: 20px;
+    float: left;
+
+}
+#list-remove-images{
+    margin-top: 15%;
+}
+

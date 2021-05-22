@@ -1,0 +1,16 @@
+br\senac\sp\bd\ConexaoDB.class
+br\senac\sp\model\CustomerAddress.class
+br\senac\sp\model\Payment.class
+br\senac\sp\dao\AddressDAO.class
+br\senac\sp\model\Order.class
+br\senac\sp\dao\OrderDAO.class
+br\senac\sp\model\Customer.class
+br\senac\sp\servlet\Store_Servlet.class
+br\senac\sp\dao\CustomerDAO.class
+br\senac\sp\dao\ProductDAO.class
+br\senac\sp\model\Card.class
+br\senac\sp\model\Address.class
+br\senac\sp\model\ProductOrder.class
+br\senac\sp\dao\CartDAO.class
+br\senac\sp\dao\PaymentDAO.class
+br\senac\sp\model\Product.class

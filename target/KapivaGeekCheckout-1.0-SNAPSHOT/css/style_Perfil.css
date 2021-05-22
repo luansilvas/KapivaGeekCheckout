@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap');
+
+
+
+#error {
+   text-align: center;
+    background-color: #FFC1C1;
+   
+}
+.ERRO{
+    color: red;
+    font-size: 20px;
+    width: 100%;
+}
+
+#formulario{
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid;
+
+}
+#demo{
+    margin: 10px;
+    
+}
+#demo form{
+    padding: 10px;
+    
+}
+
+#titulo{
+    border-bottom: 1px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#titulo:focus{
+    outline: 0;
+}
+
+.infosForm{
+    margin: 10px;
+    font-family: 'Courier Prime', monospace;
+
+}
+button{
+    width: 40%;
+    margin: 5px;
+    border-radius: 5px;
+    
+}
+.infosForm button[type=submit]{
+    color: white;
+ 
+    background-color: black;
+}
+.infosForm button:hover{
+    transition: all 0.6s;
+    transform: scale(1.1);
+    box-shadow: 0 0 5px #333;
+}
+
+.infosForm button[type=reset]{
+    background-color: white;
+    color: black;
+}
+
+#formulario .infosForm input{
+    width: 40%;
+
+}
+
+#FormAlterar .infosForm{
+margin-left: 30%;
+}
+#FormAlterar .infosForm input{
+    width: 550px;
+    background-color: lightgrey;
+    text-align: center;
+    border: none;
+    height: 60px;
+}
+
+#personal-data-label{
+    margin-left: 50px;
+    text-align: center;
+}
+
+#profilepic{
+    width: 200px;
+    height: 200px;
+    margin-top: 10%;
+    margin-left: 43%;
+}
+.table{
+   margin: 0 auto;
+}
+.table-title{
+    margin-left: 10%;
+}
+#add-address{
+    margin-left: 28%;
+}

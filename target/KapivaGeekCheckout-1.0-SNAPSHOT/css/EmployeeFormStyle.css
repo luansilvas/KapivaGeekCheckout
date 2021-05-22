@@ -1,0 +1,178 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 31/03/2021, 17:19:49
+    Author     : luans
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#imgAdd{
+    margin-right: 40px;
+}
+body .go-back{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+.containerMain{
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 50px;
+   
+}
+.main img{
+    width: 50%;
+    margin-top: 15px;
+}
+.containerList{
+
+    width: 40%;
+    margin: 12% auto;
+    background-color: white;
+}
+
+fieldset legend{
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    text-align: center;
+    border-color: deeppink;
+
+}
+fieldset table{
+    margin: 0 auto;
+    text-align: center; 
+    
+}
+
+fieldset{
+    margin: 0 auto;
+    witdth: 500px;
+    
+}
+
+body{
+    margin: 30px;
+    witdth: 500px;
+    background-color: yellow;
+    
+}
+
+#setas{
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+#nomeExtenso textArea{
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   width: 100%;
+}
+
+button[type = submit]{
+
+    width: 40%;
+    text-align: center;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 6%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border:0;
+    border-radius: 20px;
+    transition: 1s;
+    float: left;
+}
+button[type= reset]{
+    width: 40%;
+    text-align: center;
+    height: 40px;
+    margin-top: 15px;
+    margin-left: 6%;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    text-align: center;
+    border:0;
+    border-radius: 20px;
+    transition: 1s;
+    float: left;
+}
+button[type= reset]:hover, 
+button[type= submit]:hover{
+    background-color: #4a5f6a;
+    
+}
+button[type= reset]:focus, 
+button[type= submit]:focus{
+    outline: 0;
+    
+}
+#alterar{
+    margin-left: 30%;
+}
+
+.formCadastro{
+    background-color: #ccc;
+    max-width: 50%;
+    padding: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 15px;
+}
+.divsForm input{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+    float: left;
+    
+}
+#senha input{
+    float: left;
+    width: 50%;
+}
+#senha label{
+    width: 100%;
+}
+.divsForm select{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    height: 40px;
+    width: 100%;
+
+}
+#senha{
+    margin-top: 15px;
+}
+.divsForm label{
+    margin-top: 15px;
+    font-size: 10px;
+    font-family:'Press Start 2P', cursive;
+    float: left;
+}
+#lupa:focus{
+    outline: 0;
+}
+
+#barraPesquisa{
+    text-align: center;
+    margin: 0 auto;
+    margin: top 40px;
+}
+
+#barraPesquisa:focus{
+    outline: 0;;
+}
+#pesquisar{
+    width: 70%;
+}
