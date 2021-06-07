@@ -44,7 +44,7 @@ public class UserLogin_Servlet extends HttpServlet {
             if (customer != null && customer.validarSenha(senha)) {
                 List<Address> addr = AddressDAO.getCustomerAddresses(customer.getCustomer_id());
                 Address addrFat = AddressDAO.getCustomerIncomeAddresses(customer.getCustomer_id());
-                System.out.println(addr.toString());
+
                 HttpSession sessao = request.getSession();
                 Address mainAddress = addr.get(0);
                 sessao.setAttribute("mainAddress", mainAddress);
@@ -58,7 +58,6 @@ public class UserLogin_Servlet extends HttpServlet {
                     response.sendRedirect(request.getContextPath() + "/ChooseDeliveryAddress_Servlet");
                 }
 
-                System.out.println("validado...");
             } else {
                 request.setAttribute("msgErro", "Usuário ou senha Inválidos");
                 request.getRequestDispatcher("/UserLogin.jsp").forward(request, response);

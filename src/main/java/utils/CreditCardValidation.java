@@ -26,27 +26,23 @@ public class CreditCardValidation {
         if (c.getPrintedName().equals("")
                 || c.getCvv().equals("")
                 || c.getExp().equals("")) {
-            System.out.println("Existem campos que nao foram preenchidos");
+            
             errorList.add("Nem todos os campos foram preenchidos.");
         }
         if (!CheckCCNumber(c.getCard_number())) {
             errorList.add("O cartão inserido não é válido");
-            System.out.println("cartao invalido");
         }
         if (!checkExp(c.getExp())) {
-            System.out.println("Exp invalido");
             errorList.add("Data exp invalida");
         }
         if (!verificaPalavra(c.getPrintedName())) {
-            System.out.println("NOME invalido");
             errorList.add("Nome de usuario invalido");
         }
         if (!verificaCVV(c.getCvv())) {
-            System.out.println("CVV invalido");
             errorList.add("Código de verificação inválido.");
         }
         }catch(Exception e){
-            System.out.println("ERRRO DE FORMATO HEIN");
+            System.out.println("an error caught.");
         throw e;
         }
         return errorList;
@@ -84,10 +80,7 @@ public class CreditCardValidation {
             return false;
         }
         if (auxY == 2021) {
-            System.out.println("É DE 2021 HEIN");
-            if (auxM < 05) {
-                System.out.println("VENCEU ESSE ANO JA HEIN");
-                System.out.println("mes invalido");
+            if (auxM < 06) {
                 return false;
             }
             return true;

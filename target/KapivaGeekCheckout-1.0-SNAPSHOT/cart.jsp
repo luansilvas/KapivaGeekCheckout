@@ -16,8 +16,6 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -140,7 +138,7 @@
                     <div id="formCep">
                         <fieldset>
                             <form method="POST" action="${pageContext.request.contextPath}/Cart_Servlet">
-                                <legend style="margin-left: 44%">Calcular frete</legend>
+                                <legend style="margin-left: 47%">Calcular frete</legend>
 
                                 <input type="text" name="cep" id="cep" style="border:black 1px solid;margin-left: 30%;text-align: center;">
                                 <input type="hidden" id="logradouro" name="rua">
@@ -148,7 +146,7 @@
                                 <input type="hidden" id="cidade" name="cidade">
                                 <input type="hidden" id="uf" name="uf">
 
-                                <input id="" class="inputCep" type="submit" value="Calcular frete" style="margin-left: 43%">
+                                <input id="" class="inputCep" type="submit" value="Calcular frete" style="margin-left: 47%">
 
 
                             </form>

@@ -8,7 +8,6 @@ package br.senac.sp.servlet.Payment;
 import br.senac.sp.model.Card;
 import br.senac.sp.model.Payment;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.ServletException;
@@ -57,11 +56,9 @@ public class choosePayment_Servlet extends HttpServlet {
                 if (errorList.size() == 0) {
 
                     p = new Payment("Cartão", payment_instalments, "pending");
-                    System.out.println("");
 
                     sessao.setAttribute("pagamento", p);
                     sessao.setAttribute("cartaoPag", c);
-                    System.out.println((Payment) sessao.getAttribute("payment"));
 
                     request.getRequestDispatcher("/WEB-INF/reviewOrder.jsp").forward(request, response);
 

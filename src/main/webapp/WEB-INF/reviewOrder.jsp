@@ -144,114 +144,114 @@
         </c:choose>
         <div id="endCadastrado">
 
-            <legend class="table-title">Endereco de entrega</legend>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">
+            <div class="card"  style="width:60%;margin-left: 20%;">
+                <h3>
+                    Endereço de entrega
+                </h3>
+                <h5>
+                    ${deliveryAddress.address_street}
 
-                        </th>
-                        <th>Alterar<th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>${deliveryAddress.address_street},${deliveryAddress.address_number} - ${deliveryAddress.address_neighborhood},${deliveryAddress.address_state_abbreviation} - ${addrFat.address_code}</td>                   
-                        <td><a href="<c:url value="/EscolherEnderecoEntrega"/>"><i><img src="icons/pen32px.png"></i></a></td>
-                    </tr>
-                </tbody>
-            </table>
+                </h5>
+                <p>${deliveryAddress.address_street},${deliveryAddress.address_number} - ${deliveryAddress.address_neighborhood},${deliveryAddress.address_state_abbreviation} - ${addrFat.address_code}</p>
+            </div> 
+
+
+
         </div>
         <c:choose>
             <c:when test="${sessionScope.pagamento.payment_way eq 'Boleto'}">
                 <div id="endCadastrado">
 
-                    <legend class="table-title"Pagamento</legend>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Forma de pagamento</th>
 
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                
-                                 <c:choose>
-                                    <c:when test="${hasDiscount eq 'true'}">
-                                       
-                                        <td>Valor à vista de ${Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))} no ${sessionScope.pagamento.payment_way}</td>
-                                    </c:when>
-                                    <c:otherwise>
-                                       <td>Valor à vista de ${Math.ceil(valorTotal+valorFrete)} no ${sessionScope.pagamento.payment_way}</td>
-                                    </c:otherwise>
-
-                                </c:choose>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-            </c:when>
-            <c:otherwise>
-                <div id="endCadastrado">
-
-                    <legend class="table-title"Pagamento</legend>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col">Forma de pagamento</th>
-                                <th scope="col">Parcelas</th>
-                                <th scope="col">Valor da parcela</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                
-                                
-                                
-                                
-                                <td>${sessionScope.pagamento.payment_way}</td>
-                                <td>${sessionScope.pagamento.payment_instalments}</td>
-                                <td>${(Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100))/sessionScope.pagamento.payment_instalments))}</td>
-                                
-                                
-                                
-                                
-                                                                 <c:choose>
-                                    <c:when test="${hasDiscount eq 'true'}">
-                                       <td>${(Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100))/sessionScope.pagamento.payment_instalments))}</td>
-                                    </c:when>
-                                    <c:otherwise>
-                                       <td>${Math.ceil(valorTotal+valorFrete)}</td>
-                                    </c:otherwise>
-
-                                </c:choose>
-                            </tr>
-
-                        </tbody>
-                    </table>
-                </div>
-
-            </c:otherwise>
-        </c:choose>  
-        <a class="btn-large" id="go-address" href="${pageContext.request.contextPath}/FinalizeOrder_Servlet">Finalizar e enviar pedido</a> 
+                    <div class="card"  style="width:60%;margin-left: 20%;">
+                        <h3>
+                            Forma de pagamento
+                        </h3>
+                        <h5>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-        <script>
+                            <c:choose>
+                                <c:when test="${hasDiscount eq 'true'}">
+
+                                    Valor à vista de ${Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))} no ${sessionScope.pagamento.payment_way}
+                                </c:when>
+                                <c:otherwise>
+                                    Valor à vista de ${Math.ceil(valorTotal+valorFrete)} no ${sessionScope.pagamento.payment_way}
+                                </c:otherwise>
+
+                            </c:choose>
+                        </h5>            
+                    </div>
+                </c:when>
+                <c:otherwise>
+                    <div id="endCadastrado">
+
+                        <legend class="table-title"Pagamento</legend>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Forma de pagamento</th>
+                                    <th scope="col">Parcelas</th>
+                                    <th scope="col">Valor da parcela</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+
+                                    <c:choose>
+                                        <c:when test="${hasDiscount eq 'true'}">
+                                            <td>${(Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100))/sessionScope.pagamento.payment_instalments))}</td>
+                                        </c:when>
+                                        <c:otherwise>
+                                            <td>${Math.ceil(valorTotal+valorFrete)}</td>
+                                        </c:otherwise>
+
+                                    </c:choose>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                   
+                                        <div class="card"  style="width:60%;margin-left: 20%;">
+                        <h3>
+                            Forma de pagamento
+                        </h3>
+                        <h5>
 
 
-            $("select").click(function () {
-                var open = $(this).data("isopen");
-                if (open) {
-                    window.location.href = $(this).val()
-                }
+                            <c:choose>
+                                <c:when test="${hasDiscount eq 'true'}">
 
-                $(this).data("isopen", !open);
-            });
-        </script>
+                                    Valor à vista de ${Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))} no ${sessionScope.pagamento.payment_way}
+                                </c:when>
+                                <c:otherwise>
+                                    Valor à vista de ${Math.ceil(valorTotal+valorFrete)} no ${sessionScope.pagamento.payment_way}
+                                </c:otherwise>
+
+                            </c:choose>
+                        </h5>            
+                    </div>
+                </c:otherwise>
+            </c:choose>  
+            <a class="btn-large" id="go-address" href="${pageContext.request.contextPath}/FinalizeOrder_Servlet">Finalizar e enviar pedido</a> 
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+            <script>
+
+
+                $("select").click(function () {
+                    var open = $(this).data("isopen");
+                    if (open) {
+                        window.location.href = $(this).val()
+                    }
+
+                    $(this).data("isopen", !open);
+                });
+            </script>
     </body>
 </html>
 

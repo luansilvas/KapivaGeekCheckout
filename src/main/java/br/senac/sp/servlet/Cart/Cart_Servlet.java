@@ -154,9 +154,9 @@ public class Cart_Servlet extends HttpServlet {
 
         for (Product p : li) {
             if (p.getProductId() == id) {
-                System.out.println("ACHEI");
+
                 p.setQuantity(quantidade + 1);
-                System.out.println("QTDE ATUAL"+p.getQuantity());
+
                 p.setTotalPrice(p.getPrice()*(quantidade+1));
             }
         }

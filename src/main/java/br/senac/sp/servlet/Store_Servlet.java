@@ -8,7 +8,6 @@ package br.senac.sp.servlet;
 import br.senac.sp.dao.ProductDAO;
 import br.senac.sp.model.Product;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 import javax.servlet.RequestDispatcher;
@@ -33,7 +32,7 @@ public class Store_Servlet extends HttpServlet {
         if (categoria.equals("all")) {
             ProductDAO dao = new ProductDAO();
             List<Product> bonecos = dao.findProductByCategory("Boneco");
-            List<Product> camisetasMasc = dao.findProductByCategory("Camiseta masculina"); System.out.println(camisetasMasc.get(0).getProductId());
+            List<Product> camisetasMasc = dao.findProductByCategory("Camiseta masculina"); 
             List<Product> camisetasFem = dao.findProductByCategory("Camiseta Feminina");
             List<Product> canecas = dao.findProductByCategory("Caneca");
             List<Product> acessorios = dao.findProductByCategory("Acessorio");
@@ -78,7 +77,6 @@ public class Store_Servlet extends HttpServlet {
             dispatcher.forward(request, response);
         } else {
             ProductDAO dao = new ProductDAO();
-            System.out.println(">>>>>>>"+categoria);
             List<Product> bonecos = new ArrayList();
             List<Product> camisetasMasc = new ArrayList();
             List<Product> camisetasFem = new ArrayList();
@@ -170,7 +168,6 @@ public class Store_Servlet extends HttpServlet {
             throws ServletException, IOException {
         String categoria = request.getParameter("categoria");
         ProductDAO dao = new ProductDAO();
-            System.out.println(">>>>>>>"+categoria);
             List<Product> bonecos = new ArrayList();
             List<Product> camisetasMasc = new ArrayList();
             List<Product> camisetasFem = new ArrayList();

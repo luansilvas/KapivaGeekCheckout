@@ -35,7 +35,7 @@ public class changeItemSize_Servlet extends HttpServlet {
             for (Product p : listaCarrinho) {
                 if (p.getProductId()==productId) {
                     p.setSize(tamanho);
-                    System.out.println("NOVO TAMANHO: "+tamanho);
+
                 }
             }
         sessao.removeAttribute("listaCarrinho");

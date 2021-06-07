@@ -60,7 +60,22 @@
                     <div class="collapsible-body">
                         <form action="<c:url value="/choosePayment_Servlet"/>" method="POST">
                             <input type="radio" id="boleto" name="boleto" value="boleto" required>
-                            <label for="boleto" value="boleto"class="black-text">1x de ${Math.ceil(valorTotal+valorFrete)}</label>
+
+
+
+                            <c:choose>
+                                <c:when test="${hasDiscount eq 'true'}">
+                                    <label for="boleto" value="boleto"class="black-text">de <s>R$ ${Math.ceil(valorTotal+valorFrete)}</s> por R$ ${Math.ceil((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))}</label>
+
+                                </c:when>
+                                <c:otherwise>
+                                    <label for="boleto" value="boleto"class="black-text">1x de ${Math.ceil(valorTotal+valorFrete)}</label>
+                                </c:otherwise>
+
+                            </c:choose>
+
+
+
 
 
                             <button class="btn waves-effect brown" id="pay-boleto" type="submit" name="action">Pagar com boleto
@@ -73,8 +88,30 @@
                     <div class="collapsible-header"><i class="material-icons">credit_card</i>Cartão de crédito</div>
                     <div class="collapsible-body">
                         <form action="<c:url value="/choosePayment_Servlet"/>" method="POST">
-                            <label>Browser Select</label>
+                            <label>Quantidade de parcelas</label>
                             <select class="browser-default" name="parcelas">
+
+                                
+                                
+                                <c:choose>
+                                <c:when test="${hasDiscount eq 'true'}">
+ 
+                                <option value="${cartaoPag.payment_instalments}" selected>${cartaoPag.payment_instalments}</option>
+                                <option value="1">1x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100))))}</option>
+                                <option value="2">2x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/2)}</option>
+                                <option value="3">3x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/3)}</option>
+                                <option value="4">4x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/4)}</option>
+                                <option value="5">5x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/5)}</option>
+                                <option value="6">6x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/6)}</option>
+                                <option value="7">7x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/7)}</option>
+                                <option value="8">8x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/8)}</option>
+                                <option value="9">9x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/9)}</option>
+                                <option value="10">10x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/10)}</option>
+                                <option value="11">11x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/11)}</option>
+                                <option value="12">12x de R$ ${Math.ceil(((valorTotal+valorFrete)-(valorTotal*(discountPercentage/100)))/12)}</option>
+
+                                </c:when>
+                                <c:otherwise>
                                 <option value="${cartaoPag.payment_instalments}" selected>${cartaoPag.payment_instalments}</option>
                                 <option value="1">1x de ${Math.ceil((valorTotal+valorFrete))}</option>
                                 <option value="2">2x de ${Math.ceil((valorTotal+valorFrete)/2)}</option>
@@ -88,6 +125,12 @@
                                 <option value="10">10x de ${Math.ceil((valorTotal+valorFrete)/10)}</option>
                                 <option value="11">11x de ${Math.ceil((valorTotal+valorFrete)/11)}</option>
                                 <option value="12">12x de ${Math.ceil((valorTotal+valorFrete)/12)}</option>
+                                </c:otherwise>
+
+                            </c:choose>
+
+                                
+                                
                             </select>
 
 
@@ -113,7 +156,7 @@
                                 </div>
                             </div>
 
-                            <button class="btn waves-effect waves-light brown" type="submit" name="action">Salvar
+                            <button class="btn waves-effect waves-light brown"  id="pay-card" type="submit" name="action">Salvar
                                 <i class="material-icons right"></i>
                             </button>
 
@@ -125,28 +168,28 @@
                 <c:if test="${hasDiscountError eq 'true'}">
                     <div class="msg msg-error z-depth-3 scale-transition">
                         <ul>
-                                <li>${ErrorMessage}</li>
+                            <li>${ErrorMessage}</li>
                         </ul>
                     </div>
                 </c:if>
-                                <c:if test="${hasDiscountError eq 'false'}">
+                <c:if test="${hasDiscountError eq 'false'}">
                     <div class="msg msg-success z-depth-3 scale-transition">
                         <ul>
 
-                                <li>${ErrorMessage}</li>
+                            <li>${ErrorMessage}</li>
 
                         </ul>
                     </div>
                 </c:if>
-                
-                
+
+
                 <fieldset>
                     <form method="POST" action="${pageContext.request.contextPath}/addDiscount_Servlet">
-                        <legend style="margin-left: 35%">Inserir cupom</legend>
+                        <legend style="margin-left: 43%">Inserir cupom</legend>
 
-                        <input type="text" name="cupom" id="cupom" style="border:black 1px solid;margin-left: 30%;width:45%;text-align: center;">
+                        <input type="text" name="cupom" id="cupom" style="border:black 1px solid;margin-left: 28%;width:45%;text-align: center;">
 
-                        <input id="" class="inputCep" type="submit" value="Submeter" style="margin-left: 35%">
+                        <input id="" class="inputCep" type="submit" value="Submeter" style="margin-left: 44%">
 
 
                     </form>

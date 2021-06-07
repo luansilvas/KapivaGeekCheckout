@@ -7,7 +7,6 @@ package br.senac.sp.servlet.Address;
 
 import br.senac.sp.model.Address;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

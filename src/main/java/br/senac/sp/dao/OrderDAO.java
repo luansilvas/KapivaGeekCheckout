@@ -66,7 +66,7 @@ public class OrderDAO {
     }
     
     public static List<Order> getOrders(int customerId){
-        String sql = "select * from purchaseorder where customer_customer_id="+customerId + ";";
+        String sql = "select * from purchaseorder where customer_customer_id="+customerId + " order by diaPedido DESC;";
         System.out.println(sql);
         ArrayList<Order> prodBd = new ArrayList<>();
 

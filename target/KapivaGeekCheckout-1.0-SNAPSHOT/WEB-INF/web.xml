@@ -56,6 +56,22 @@
         <servlet-name>addDiscount_Servlet</servlet-name>
         <servlet-class>br.senac.sp.servlet.Payment.addDiscount_Servlet</servlet-class>
     </servlet>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Store_Servlet</location>
+    </error-page>
+    <error-page>
+        <error-code>500</error-code>
+        <location>/Store_Servlet</location>
+    </error-page>
+    <error-page>
+        <error-code>503</error-code>
+        <location>/Store_Servlet</location>
+    </error-page>
+    <servlet>
+        <servlet-name>OrderHistory_Servlet</servlet-name>
+        <servlet-class>br.senac.sp.servlet.Order.OrderHistory_Servlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Store_Servlet</servlet-name>
         <url-pattern>/Store_Servlet</url-pattern>
@@ -111,6 +127,10 @@
     <servlet-mapping>
         <servlet-name>addDiscount_Servlet</servlet-name>
         <url-pattern>/addDiscount_Servlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>OrderHistory_Servlet</servlet-name>
+        <url-pattern>/OrderHistory_Servlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

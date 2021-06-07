@@ -9,7 +9,6 @@ import br.senac.sp.dao.AddressDAO;
 import br.senac.sp.model.Address;
 import br.senac.sp.model.Customer;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -32,9 +31,7 @@ public class RegisterNewDeliveryAddress extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        System.out.println("Acessei o servlet de endereco");
         try{
-        System.out.println("Acessei o servlet de endereco");
         HttpSession sessao = request.getSession();
         String complement = " ";
         String title = " ";

@@ -45,7 +45,7 @@ public class FinalizeOrder_Servlet extends HttpServlet {
             double vlrTotal = (Double) sessao.getAttribute("valorTotal");
             vlrTotal += (Double) sessao.getAttribute("valorFrete");
             if (sessao.getAttribute("hasDiscount") != null&&sessao.getAttribute("discountPercentage")!=null) {
-                System.out.println("Has discount");
+
                 vlrTotal = Math.ceil(vlrTotal - (vlrTotal * 0.4));
             }
 
@@ -66,7 +66,7 @@ public class FinalizeOrder_Servlet extends HttpServlet {
             sessao.setAttribute("valorTotal", 0.0);
             request.getRequestDispatcher("/WEB-INF/SellFinalized.jsp").forward(request, response);
         } catch (Exception e) {
-            System.out.println("PEGUEI UMA EXCECAO" + e);
+            System.out.println(e);
             request.getRequestDispatcher("/WEB-INF/SellWithError.jsp").forward(request, response);
         }
     }
